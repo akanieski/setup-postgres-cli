@@ -2,7 +2,7 @@ name: 'Setup Postgres CLI'
 description: 'Execute postgres command-line client commands'
 author: 'Andrew Kanieski'
 branding:
-  icon: 'tool'
+  icon: 'database'
   color: 'blue'
 inputs:
   commands:
