@@ -1,0 +1,16 @@
+name: 'Setup Postgres CLI'
+description: 'Execute postgres command-line client commands'
+inputs:
+  commands:
+    description: 'Actions to take'
+    required: true
+    default: 'pg_dump -U user -h 127.0.0.1 -p 5432'
+  password:
+    description: 'Password passed to postgres cli'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.password }}
+    - ${{ inputs.commands }}
